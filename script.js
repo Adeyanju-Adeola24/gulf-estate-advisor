@@ -33,22 +33,36 @@ function runCounter(el) {
     el.textContent = (target === 0 ? '0' : cur) + (target === 100 ? '+' : target === 8 ? '%' : target === 10 ? '+' : '');
   }, 50);
 }
-// Lead forms -> WhatsApp
+// Lead forms -> WhatsApp + Google Sheet + ad tracking
 const WA_NUMBER = '971500000000';
+const SHEET_WEBHOOK_URL = ''; // <-- paste your Apps Script Web App URL here (see chat steps)
+function saveLead(d) {
+  if (!SHEET_WEBHOOK_URL) return;
+  fetch(SHEET_WEBHOOK_URL, { method: 'POST', mode: 'no-cors',
+    headers: { 'Content-Type': 'text/plain' },
+    body: JSON.stringify({ page: location.href, ...d })
+  }).catch(() => {}); // sheet is backup; WhatsApp still fires
+}
+function trackLead(d) {
+  try {
+    if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: d.goal || 'Gulf enquiry' });
+    if (typeof gtag !== 'undefined') gtag('event', 'generate_lead', { currency: 'AED', value: 1 });
+  } catch (_) {}
+}
 function handleLead(formId, successId, summaryId) {
   const form = document.getElementById(formId);
   if (!form) return;
   form.addEventListener('submit', e => {
     e.preventDefault();
     const d = Object.fromEntries(new FormData(form).entries());
-    const msg = `New Gulf Lead: ${d.name} | ${d.phone} | ${d.budget||''} | ${d.goal||''} | ${d.type||''} | ${d.pref||''}`;
+    const msg = `New Gulf Lead: ${d.name} | ${d.phone} | ${d.budget||''} | ${d.goal||''} | ${d.type||''} | ${d.timeline||''} | ${d.pref||''}`;
     if (summaryId) document.getElementById(summaryId).textContent = `${d.budget||''} • ${d.goal||''} • ${d.type||''}`;
     document.getElementById(successId).classList.remove('hidden');
     form.style.display = 'none';
+    saveLead(d);
+    trackLead(d);
     // Open WhatsApp to you with lead details
     window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
-    // TODO: also POST to Google Sheet / CRM webhook here
-    // fetch('YOUR_WEBHOOK_URL', {method:'POST', body: JSON.stringify(d)})
   });
 }
 handleLead('leadForm', 'formSuccess', 'summary');

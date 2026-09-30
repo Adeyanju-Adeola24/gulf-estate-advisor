@@ -9,6 +9,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
+<!-- Tracking: paste your IDs below. Left empty = tracking stays off, zero console noise. -->
+<script>
+window.GA4_ID = '';        // e.g. 'G-ABC123XYZ'  (Google Analytics > Admin > Data Streams)
+window.META_PIXEL_ID = ''; // e.g. '1234567890123' (Meta Events Manager > Data Sources)
+(function () {
+  if (window.GA4_ID) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA4_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', window.GA4_ID);
+  }
+  if (window.META_PIXEL_ID) {
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+      }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0; t.src = v;
+      s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', window.META_PIXEL_ID); fbq('track', 'PageView');
+  }
+})();
+</script>
 </head>
 <body>
 
@@ -82,6 +109,10 @@
           <option>Apartment</option><option>Duplex</option><option>Penthouse</option>
           <option>Townhouse</option><option>Villa</option><option>Beachfront Property</option>
           <option>Not sure – Advise me</option>
+        </select></label>
+        <label>Timeline<select name="timeline">
+          <option>Ready to buy now</option><option>Within 3 months</option>
+          <option>Just researching</option>
         </select></label>
         <button type="submit" class="btn btn-gold btn-full">Request Callback →</button>
         <small class="form-note">No spam. Only qualified options. 🔒</small>
