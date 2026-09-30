@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gulf Property Advisor | Dubai, Abu Dhabi & UAE Real Estate</title>
+<meta name="description" content="Personal advisor for Gulf real estate. Apartments, villas, penthouses, townhouses & beachfront from Emaar, Damac, Sobha, Binghatti & more." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="container nav-inner">
+    <div class="logo"><span class="logo-icon">◈</span> GULF<span>ESTATE</span> <small>Advisor</small></div>
+    <nav class="links">
+      <a href="#properties">Properties</a>
+      <a href="#locations">Locations</a>
+      <a href="#developers">Developers</a>
+      <a href="#process">Process</a>
+      <a href="#contact" class="btn btn-gold btn-sm">Book Free Call</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#properties">Properties</a>
+    <a href="#locations">Locations</a>
+    <a href="#developers">Developers</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Book Free Call</a>
+  </div>
+</header>
+
+<!-- HERO with real image -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=80" alt="Dubai skyline" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <div class="badge">★ Trusted for Emaar • Sobha • Damac • Aldar • Meraas</div>
+      <h1>Gulf Real Estate,<br><em>Without the Guesswork.</em></h1>
+      <p class="sub">I call you, qualify your goals, advise honestly, and pitch only the project / location / developer that fits — then manage everything from entry to exit.</p>
+      <div class="hero-pills">
+        <span>🏢 Apartment</span><span>🏛️ Duplex</span><span>🌆 Penthouse</span>
+        <span>🏘️ Townhouse</span><span>🏡 Villa</span><span>🏖️ Beachfront</span>
+      </div>
+      <div class="cta-row">
+        <a href="#contact" class="btn btn-gold">Get Qualified Advice →</a>
+        <a href="https://wa.me/971500000000" target="_blank" class="btn btn-glass">💬 WhatsApp Me</a>
+      </div>
+      <div class="hero-thumbs">
+        <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=400&q=70" alt="Burj Khalifa" />
+        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=400&q=70" alt="Villa" />
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=70" alt="Beach" />
+        <div class="thumb-text"><strong>0% Tax • 5-9% Yields</strong><span>UAE freehold advantage</span></div>
+      </div>
+    </div>
+
+    <div class="lead-card reveal" id="leadFormCard">
+      <div class="lead-head">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=70" alt="Advisor" class="advisor-img" />
+        <div><h3>Check What Suits You Best</h3><p>60-sec qualifier. I’ll call with shortlisted projects.</p></div>
+      </div>
+      <form id="leadForm">
+        <label>Name*<input required name="name" placeholder="Your full name" /></label>
+        <label>Phone / WhatsApp*<input required name="phone" placeholder="+91 / +971 ..." /></label>
+        <div class="row2">
+          <label>Budget<select name="budget">
+            <option>Under AED 800K</option><option selected>AED 800K – 1.5M</option>
+            <option>AED 1.5M – 3M</option><option>AED 3M – 5M</option><option>AED 5M+</option>
+          </select></label>
+          <label>Goal<select name="goal">
+            <option>Investment – Rental Yield</option><option>Investment – Capital Growth</option>
+            <option>Self Use / Relocate</option><option>Golden Visa (AED 2M+)</option>
+          </select></label>
+        </div>
+        <label>Property Type<select name="type">
+          <option>Apartment</option><option>Duplex</option><option>Penthouse</option>
+          <option>Townhouse</option><option>Villa</option><option>Beachfront Property</option>
+          <option>Not sure – Advise me</option>
+        </select></label>
+        <button type="submit" class="btn btn-gold btn-full">Request Callback →</button>
+        <small class="form-note">No spam. Only qualified options. 🔒</small>
+      </form>
+      <div id="formSuccess" class="success hidden">✓ Received! I’ll call you shortly.<br><span id="summary"></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="trustbar">
+  <div class="container trust-inner">
+    <span>EMAAR</span><span>DAMAC</span><span>SOBHA</span><span>BINGHATTI</span><span>DANUBE</span><span>NAKHEEL</span><span>MERAAS</span><span>ELLINGTON</span><span>ALDAR</span><span>IMTIAZ</span>
+  </div>
+</div>
+
+<!-- STATS BAND -->
+<section class="stats-band">
+  <div class="container stats-grid">
+    <div class="reveal"><strong data-count="8">0</strong><span>% Avg Rental Yield*</span></div>
+    <div class="reveal"><strong data-count="0">0</strong><span>% Income & Capital Gains Tax</span></div>
+    <div class="reveal"><strong data-count="10">0</strong><span>+ Top Developers Covered</span></div>
+    <div class="reveal"><strong data-count="100">0</strong><span>% Remote Closing Support</span></div>
+  </div>
+</section>
+
+<!-- PROPERTIES with real images -->
+<section id="properties" class="section">
+  <div class="container">
+    <p class="eyebrow">Property Segments</p>
+    <h2>Prices vary by type, location & developer.<br>I match you to the right one.</h2>
+    <p class="muted">Tap a filter. Every enquiry gets a personal shortlist.</p>
+    <div class="filters" id="propFilters">
+      <button class="active" data-f="all">All ✨</button>
+      <button data-f="yield">High Rental Yield</button>
+      <button data-f="luxury">Luxury / Beachfront</button>
+      <button data-f="family">Family Living</button>
+    </div>
+    <div class="grid3" id="propGrid">
+      <div class="card reveal" data-tags="yield family">
+        <div class="card-media"><img loading="lazy" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=70" alt="Apartment" /><span class="price">From ~AED 650K</span></div>
+        <div class="card-body"><h3>Apartments</h3><p>Studios to 3BR. JVC, Business Bay, Marina. Best first investment.</p><span class="tag">Yield 6-8%</span></div>
+      </div>
+      <div class="card reveal" data-tags="family yield">
+        <div class="card-media"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=70" alt="Duplex" /><span class="price">From ~AED 1.1M</span></div>
+        <div class="card-body"><h3>Duplexes</h3><p>2-level city living. More space than flat, less than villa. Great for Airbnb.</p><span class="tag">Smart Space</span></div>
+      </div>
+      <div class="card reveal" data-tags="luxury">
+        <div class="card-media"><img loading="lazy" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=70" alt="Penthouse" /><span class="price">From ~AED 3M</span></div>
+        <div class="card-body"><h3>Penthouses</h3><p>Sky-high with private pools. Downtown, Palm, Creek Harbour.</p><span class="tag">Ultra Premium</span></div>
+      </div>
+      <div class="card reveal" data-tags="family">
+        <div class="card-media"><img loading="lazy" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=70" alt="Townhouse" /><span class="price">From ~AED 1.8M</span></div>
+        <div class="card-body"><h3>Townhouses</h3><p>Villa feel + community. Meraas, Nakheel, Emaar communities.</p><span class="tag">Community</span></div>
+      </div>
+      <div class="card reveal" data-tags="family luxury">
+        <div class="card-media"><img loading="lazy" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=70" alt="Villa" /><span class="price">From ~AED 2.5M</span></div>
+        <div class="card-body"><h3>Villas</h3><p>Standalone luxury. Palm Jumeirah, Emirates Hills, Yas & Saadiyat.</p><span class="tag">Freehold Land</span></div>
+      </div>
+      <div class="card reveal" data-tags="luxury yield">
+        <div class="card-media"><img loading="lazy" src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=800&q=70" alt="Beachfront" /><span class="price">From ~AED 2.1M</span></div>
+        <div class="card-body"><h3>Beachfront</h3><p>Emaar Beachfront, Sobha Siniya, Palm. Top short-stay demand.</p><span class="tag">High Demand</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATIONS -->
+<section id="locations" class="section loc-section">
+  <div class="container">
+    <p class="eyebrow">Hot Locations</p>
+    <h2>Where your money works hardest.</h2>
+    <div class="loc-grid">
+      <div class="loc-card tall reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=70" alt="Downtown Dubai" /><div class="loc-info"><h3>Downtown Dubai</h3><span>Burj Khalifa • Most liquid resale</span></div></div>
+      <div class="loc-card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1528702748617-c64d49f918af?auto=format&fit=crop&w=800&q=70" alt="Dubai Marina" /><div class="loc-info"><h3>Palm Jumeirah</h3><span>Nakheel icon • Villa + beachfront</span></div></div>
+      <div class="loc-card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70" alt="Beachfront" /><div class="loc-info"><h3>Emaar Beachfront</h3><span>Private beach • High Airbnb</span></div></div>
+      <div class="loc-card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1512632578888-169bbbc64f33?auto=format&fit=crop&w=800&q=70" alt="Abu Dhabi" /><div class="loc-info"><h3>Abu Dhabi – Yas</h3><span>Aldar • Family + F1 district</span></div></div>
+      <div class="loc-card reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=70" alt="Creek Harbour" /><div class="loc-info"><h3>Creek Harbour</h3><span>Emaar • Next Downtown</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVELOPERS -->
+<section id="developers" class="section dark dev-section">
+  <div class="container">
+    <p class="eyebrow gold">Top Developers I Work With</p>
+    <h2>Not every developer suits every buyer.</h2>
+    <p class="muted-light">Track record, handover history, service charges & resale liquidity — then I pitch.</p>
+    <div class="dev-grid">
+      <div class="dev reveal"><div class="dev-logo">E</div><strong>Emaar</strong><span>Downtown / Creek • Most liquid</span></div>
+      <div class="dev reveal"><div class="dev-logo">D</div><strong>Damac</strong><span>Luxury branding • Flexi plans</span></div>
+      <div class="dev reveal"><div class="dev-logo">S</div><strong>Sobha</strong><span>Top quality • Hartland, Siniya</span></div>
+      <div class="dev reveal"><div class="dev-logo">B</div><strong>Binghatti</strong><span>High yield • Business Bay</span></div>
+      <div class="dev reveal"><div class="dev-logo">D</div><strong>Danube</strong><span>1% plans • First investors</span></div>
+      <div class="dev reveal"><div class="dev-logo">N</div><strong>Nakheel</strong><span>Palm Jumeirah master</span></div>
+      <div class="dev reveal"><div class="dev-logo">M</div><strong>Meraas</strong><span>Bluewaters • Lifestyle</span></div>
+      <div class="dev reveal"><div class="dev-logo">E</div><strong>Ellington</strong><span>Design-led • Rental premium</span></div>
+      <div class="dev reveal"><div class="dev-logo">A</div><strong>Aldar</strong><span>Abu Dhabi • Yas, Saadiyat</span></div>
+      <div class="dev reveal"><div class="dev-logo">I</div><strong>Imtiaz</strong><span>Value • JVC / Arjan</span></div>
+    </div>
+    <div class="showcase reveal">
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=70" alt="Luxury interior" />
+      <div class="showcase-text"><h3>“I reject 90% of launches. You see only the 2-3 that fit your goal.”</h3><p>Floor-wise ROI sheet, service-charge math & exit plan shared on call — not brochure hype.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section">
+  <div class="container">
+    <p class="eyebrow">How I Work</p>
+    <h2>I qualify first. I pitch second.</h2>
+    <div class="steps">
+      <div class="step reveal"><span>1</span><div class="step-icon">📞</div><h3>I Call You</h3><p>Budget, timeline, investment vs self-use, visa.</p></div>
+      <div class="step reveal"><span>2</span><div class="step-icon">🎯</div><h3>Qualify & Filter</h3><p>Shortlist 2-3 projects that fit your goal.</p></div>
+      <div class="step reveal"><span>3</span><div class="step-icon">💡</div><h3>Advise & Guide</h3><p>Pros/cons: charges, ROI, handover, exit.</p></div>
+      <div class="step reveal"><span>4</span><div class="step-icon">🏙️</div><h3>Pitch Best Match</h3><p>Project + location + payment plan.</p></div>
+      <div class="step gold-step reveal"><span>5</span><div class="step-icon">🔑</div><h3>Close & Support</h3><p>Negotiation, SPA, escrow till keys.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MANAGEMENT -->
+<section id="manage" class="section dark">
+  <div class="container">
+    <p class="eyebrow gold">Entry → Exit Ownership</p>
+    <h2>One person manages everything after you buy.</h2>
+    <div class="manage-grid">
+      <div class="mcard reveal"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=600&q=60" alt="Handover" /><h3>🤝 Handover</h3><p>Snagging, DLD, DEWA, Golden Visa paperwork.</p></div>
+      <div class="mcard reveal"><img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=600&q=60" alt="Rental" /><h3>🔑 Rental</h3><p>Long-term / Airbnb setup, Ejari, collection.</p></div>
+      <div class="mcard reveal"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=60" alt="Resale" /><h3>📈 Resale</h3><p>Right-time exit, staging, max ROI negotiation.</p></div>
+      <div class="mcard reveal"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=60" alt="Management" /><h3>🏠 Property Mgmt</h3><p>Maintenance, charges, annual reports.</p></div>
+    </div>
+    <div class="banner">NRI / Remote Investor? <strong>100% remote closing + POA support.</strong> <a href="#contact">Talk to me →</a></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials">
+  <div class="container">
+    <p class="eyebrow">Client Love</p>
+    <h2>Investors who closed with clarity.</h2>
+    <div class="testi-grid">
+      <div class="testi reveal"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=60" alt="client" /><p>“He told me NOT to buy the hyped launch and got me a Sobha resale with 7% net. That honesty won me.”</p><strong>Rohit S. — Mumbai • Sobha Hartland</strong></div>
+      <div class="testi reveal"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=60" alt="client" /><p>“Full remote closing from Delhi. Video walkthroughs, escrow, handover + tenant placed in 3 weeks.”</p><strong>Priya M. — Delhi • Binghatti, JVC</strong></div>
+      <div class="testi reveal"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=60" alt="client" /><p>“Golden Visa + beachfront 1BR. He handled DLD to DEWA to visa. One WhatsApp for everything.”</p><strong>Anil K. — Hyderabad • Emaar Beachfront</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section class="section why-section">
+  <div class="container grid2">
+    <div class="reveal">
+      <p class="eyebrow">Why Me vs Portal / Agency</p>
+      <h2>Portals list everything.<br>Agencies push targets.<br><span class="gold-text">I protect your interest.</span></h2>
+      <ul class="checklist">
+        <li><i>✓</i> <div><strong>No target-pressure:</strong> if Gulf doesn’t suit you, I’ll tell you.</div></li>
+        <li><i>✓</i> <div><strong>Developer-agnostic:</strong> Emaar to Imtiaz — fit, not commission.</div></li>
+        <li><i>✓</i> <div><strong>End-to-end:</strong> most agents vanish after commission. I stay till exit.</div></li>
+        <li><i>✓</i> <div><strong>Investor math:</strong> net yield after charges — not brochure numbers.</div></li>
+      </ul>
+    </div>
+    <div class="quote-card reveal">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=60" alt="Investment" class="quote-img" />
+      <h3>Sample Investor Math On Call</h3>
+      <table>
+        <tr><td>Apartment, JVC – AED 800K</td><td><strong>Rent ~55K/yr</strong></td></tr>
+        <tr><td>Less charges ~9K</td><td>Net ~46K = 5.75%</td></tr>
+        <tr><td>Beachfront 1BR – AED 2.1M</td><td><strong>Short-stay ~160K</strong></td></tr>
+        <tr><td>Less costs ~30K</td><td>Net ~6.1% + growth</td></tr>
+      </table>
+      <small>* Illustrative. Actuals + floor sheet on call.</small>
+      <a href="#contact" class="btn btn-gold btn-full">Get My Numbers →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section slim">
+  <div class="container">
+    <h2>FAQs</h2>
+    <details open><summary>Can foreigners buy in Dubai / Abu Dhabi?</summary><p>Yes — freehold zones (Marina, Downtown, Palm, JVC, Business Bay; Aldar zones in Abu Dhabi). Full ownership with Title Deed.</p></details>
+    <details><summary>What budget do I need?</summary><p>From ~AED 600-800K (Danube/Binghatti/Imtiaz), AED 1-2M mid (Emaar/Sobha), AED 3M+ luxury. I map best ROI to your budget.</p></details>
+    <details><summary>Do I need to visit?</summary><p>No. Passport + escrow transfer. I do video walkthroughs & POA handover.</p></details>
+    <details><summary>Golden Visa?</summary><p>AED 2M+ = 10-yr Golden Visa. I handle structuring + docs.</p></details>
+    <details><summary>Your charges?</summary><p>Developer pays off-plan commission — you pay nothing extra vs direct. Management included.</p></details>
+  </div>
+</section>
+
+<section id="contact" class="section dark contact-section">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1600&q=60" alt="" /><div class="hero-overlay"></div></div>
+  <div class="container grid2" style="position:relative">
+    <div>
+      <p class="eyebrow gold">Book Free 15-min Call</p>
+      <h2>Tell me your goal.<br>I’ll tell you if Gulf fits.</h2>
+      <p class="muted-light">Call / WhatsApp: <a class="gold-link" href="https://wa.me/971500000000">+971 50 000 0000</a><br>Email: advisor@gulfestate.example</p>
+      <p class="muted-light">IST + GST friendly • Hindi / English</p>
+    </div>
+    <div class="lead-card light">
+      <h3>Prefer I call you?</h3>
+      <form id="leadForm2"><label>Name*<input required name="name" /></label><label>Phone*<input required name="phone" /></label><button class="btn btn-gold btn-full">Call Me Back →</button></form>
+      <div id="formSuccess2" class="success hidden">✓ Done! Expect my call shortly.</div>
+    </div>
+  </div>
+  <footer class="container footer">© 2026 GulfEstate Advisor • Independent UAE advisory • Prices indicative. *Yields vary by project.</footer>
+</section>
+
+<a href="https://wa.me/971500000000" class="wa-float" target="_blank">💬</a>
+<script src="script.js"></script>
+</body>
+</html>
